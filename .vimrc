@@ -26,6 +26,7 @@ map k gk
 syntax on
 autocmd ColorScheme * highlight LineNr ctermfg=100
 colorscheme hybrid
+autocmd BufNewFile,BufRead *.{html,htm,vue*} set filetype=html
 
 " Column char limit
 execute "set colorcolumn=" . join(range(91, 95), ',')
