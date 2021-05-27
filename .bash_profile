@@ -52,5 +52,25 @@ else
     fi
 fi
 unset __conda_setup
-# <<< conda init <<<
-export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/bison@2.7/bin:$PATH"
+
+alias python="python3"
+alias pip="pip3"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/taiga/google-cloud-sdk/path.bash.inc' ]; then . '/Users/taiga/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/taiga/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/taiga/google-cloud-sdk/completion.bash.inc'; fi
+
+export PATH="/usr/local/opt/krb5/bin:$PATH"
+export PATH="/usr/local/opt/krb5/sbin:$PATH"
+export PKG_CONFIG_PATH="/usr/local/opt/krb5/lib/pkgconfig:$PKG_CONFIG_PATH"
+
+export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
+export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
+export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig:$PKG_CONFIG_PATH"
+export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig:$PKG_CONFIG_PATH"
+export PKG_CONFIG_PATH="/usr/local/opt/icu4c/lib/pkgconfig:$PKG_CONFIG_PATH"
+export PKG_CONFIG_PATH="/usr/local/opt/libedit/lib/pkgconfig:$PKG_CONFIG_PATH"
+export PKG_CONFIG_PATH="/usr/local/opt/libxml2/lib/pkgconfig:$PKG_CONFIG_PATH"

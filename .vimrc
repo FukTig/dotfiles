@@ -22,14 +22,17 @@ set clipboard=unnamed,autoselect
 map j gj
 map k gk
 
-"ColorScheme
+" ColorScheme
 syntax on
 autocmd ColorScheme * highlight LineNr ctermfg=100
-colorscheme hybrid
+" colorscheme hybrid
 autocmd BufNewFile,BufRead *.{html,htm,vue*} set filetype=html
 
 " Column char limit
-execute "set colorcolumn=" . join(range(91, 95), ',')
+set term=screen-256color
+execute "set colorcolumn=" . join(range(91, 300), ',')
+autocmd BufRead,BufNewFile *.py execute "set colorcolumn=" . join(range(80, 300), ',')
+highlight ColorColumn ctermbg=235 guibg=#2c2d27
 
 filetype off
 if has('vim_starting')
